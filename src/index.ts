@@ -1,28 +1,38 @@
+/**
+ *
+ */
+import errorHandler from "errorhandler";
+import app from "./app";
 import dotenv from "dotenv";
-import express from "express";
-import path from "path";
 
-// initialize configuration
+/**
+ * initialize configuration
+ */
 dotenv.config();
 
-// port is now available to the Node.js runtime
-// as if it were an environment variable
+/**
+ * port is now available to the Node.js runtime
+ * as if it were an environment variable
+ */
 const port = process.env.SERVER_PORT;
+const env = process.env.NODE_ENV;
 
-const app = express();
+/**
+ * Error Handler. Provides full stack
+ */
+if (process.env.NODE_ENV === "development") {
+    app.use(errorHandler());
+}
 
-// Configure Express to use EJS
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
 
-// define a route handler for the default home page
-app.get("/", (req, res) => {
-    // render the index template
-    res.render("index");
-});
-
-// start the express server
-app.listen(port, () => {
+/**
+ * Start Express server.
+ */
+const server = app.listen(port, () => {
     // tslint:disable-next-line:no-console
-    console.log(`server started at http://localhost:${port}`);
+    console.log("App is running at http://localhost:%d in %s mode", port, env);
+    // tslint:disable-next-line:no-console
+    console.log("Press CTRL-C to stop\n");
 });
+
+export default server;
