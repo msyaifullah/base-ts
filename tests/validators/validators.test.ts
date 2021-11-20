@@ -7,11 +7,11 @@ import { expect } from "chai";
 
 describe('ZipCodeValidator tests', () => { // the tests container
 
-    it('checking default ZipCodeValidator', () => { // the single test
+    it('checking default ZipCodeValidator', (done) => { // the single test
         const zipCodeValidator = new ZipCodeValidator(); // this will be your class
 
         expect(zipCodeValidator.isAcceptable('123456')).to.be.false;
-
+        done();
     });
 
 });
