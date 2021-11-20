@@ -1,7 +1,7 @@
 {
   "name": "base-ts",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "A starting point for Node.js express apps with TypeScript",
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
@@ -18,7 +18,7 @@
     "test": "jest --forceExit --coverage --verbose"
   },
   "author": "masykuri syaifullah",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
