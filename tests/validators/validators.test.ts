@@ -2,7 +2,7 @@
  * Create by Masykuri Syaifullah 20/12/2021
  * Validate by Masykuri Syaifullah 21/12/2021
  */
-import { ZipCodeValidator } from "../src/Classes/Validator/ZipCodeValidator"; // this will be your custom import
+import { ZipCodeValidator } from "../../src/modules/validator/ZipCodeValidator"; // this will be your custom import
 import { expect } from "chai";
 
 describe('ZipCodeValidator tests', () => { // the tests container
