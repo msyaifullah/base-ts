@@ -17,21 +17,21 @@ export class MonkeyHandler extends AbstractHandler {
     }
 }
 
-export class SquirrelHandler extends AbstractHandler {
-    public handle(request: string): string {
-        if (request === FOOD_SQUIRREL) {
-            return `Squirrel: I'll eat the ${request}.`;
-        }
-        return super.handle(request);
-    }
-}
-
-export class DogHandler extends AbstractHandler {
-    public handle(request: string): string {
-        if (request === FOOD_DOG) {
-            return `Dog: I'll eat the ${request}.`;
-        }
-        return super.handle(request);
-    }
-}
+// export class SquirrelHandler extends AbstractHandler {
+//     public handle(request: string): string {
+//         if (request === FOOD_SQUIRREL) {
+//             return `Squirrel: I'll eat the ${request}.`;
+//         }
+//         return super.handle(request);
+//     }
+// }
+//
+// export class DogHandler extends AbstractHandler {
+//     public handle(request: string): string {
+//         if (request === FOOD_DOG) {
+//             return `Dog: I'll eat the ${request}.`;
+//         }
+//         return super.handle(request);
+//     }
+// }
 
