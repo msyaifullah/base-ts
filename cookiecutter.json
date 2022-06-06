@@ -1,0 +1,12 @@
+{
+    "full_name": "Masykuri Syaifullah",
+    "email": "msyaifullah@gmail.com",
+    "github_username": "msyaifullah",
+    "project_name": "Base Typescript Project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_short_description": "Base TScript project contains all the boilerplate you need to create a backend service.",    
+    "version": "0.0.0",        
+    "command_line_interface": ["Click", "Argparse", "No command-line interface"],
+    "create_author_file": "y",
+    "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
+  }
