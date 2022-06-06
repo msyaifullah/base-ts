@@ -32,8 +32,6 @@ export const getContact = (req: Request, res: Response, next: NextFunction) => {
 export const postContact = async (req: Request, res: Response, next: NextFunction) => {
     const user = req.body as UserDocument;
 
-
-
     res.status(200).json({
         title: "Contact API Push",
         profile: user
